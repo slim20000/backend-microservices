@@ -7,21 +7,22 @@ import com.pi.bookingservice.model.Booking;
 import com.pi.bookingservice.repository.BookingRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
+
 import javax.mail.MessagingException;
 import javax.transaction.Transactional;
 import java.io.IOException;
 import java.time.LocalDate;
-
 import java.time.temporal.ChronoUnit;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -43,6 +44,7 @@ public class BookingService {
     private JavaMailSender mailSender;
     @Value("${paiement-service.url}")
     private String paymentServiceUrl;
+
     public Booking createBooking(Booking booking, String token, Double amount, String currency) {
         boolean isRoomAvailable = checkRoomAvailability(booking.getRoomId(), booking.getStartDate(), booking.getEndDate());
         if (!isRoomAvailable) {
@@ -82,7 +84,7 @@ public class BookingService {
         return isAvailable;
     }
 
-    public Booking extendBooking(long bookingId, LocalDate newEndDate, String token,Double amount, String currency) {
+    public Booking extendBooking(long bookingId, LocalDate newEndDate, String token, Double amount, String currency) {
         Booking booking = bookingRepository.findById(bookingId).orElseThrow(() -> new RuntimeException("Booking not found"));
         Room room = getRoomById(booking.getRoomId());
         int numNights = (int) ChronoUnit.DAYS.between(booking.getEndDate(), newEndDate);
@@ -159,7 +161,7 @@ public class BookingService {
         return bookingRepository.findByEndDateBetween(currentDate, oneWeekFromNow);
     }
 
-   // @Scheduled(fixedRate = 30000)
+    // @Scheduled(fixedRate = 30000)
     @Scheduled(cron = "0 0 0 * * *")
     public void NotificationEmail() {
         List<Booking> bookingsEndingInOneWeek = scheduel();
@@ -180,7 +182,6 @@ public class BookingService {
     }
 
 
-
     public Statistics getStatistics(LocalDate startDate, LocalDate endDate) {
         List<Booking> bookings = bookingRepository.findByStartDateBetween(startDate, endDate);
         Long numBookings = (long) bookings.size();
@@ -194,6 +195,7 @@ public class BookingService {
                 .collect(Collectors.groupingBy(Booking::getUserEmail, Collectors.counting()));
         return new Statistics(numBookings, totalRevenue, avgRevenuePerBooking, numBookingsPerRoom, numBookingsPerUser);
     }
+
     //@Scheduled(fixedRate = 30000)
     @Scheduled(cron = "0 0 0 * * *")
     public void deleteExpiredBookings() {
@@ -206,7 +208,7 @@ public class BookingService {
     }
 
 
-   // @Scheduled(fixedRate = 30000)
+    // @Scheduled(fixedRate = 30000)
     @Scheduled(cron = "0 0 0 * * *")
     public void checkAutoRenewalBookings() {
         LocalDate today = LocalDate.now();
