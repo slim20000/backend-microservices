@@ -15,10 +15,6 @@ import org.springframework.stereotype.Service;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import javax.transaction.Transactional;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 @Service
 @RequiredArgsConstructor
@@ -56,6 +52,7 @@ public class EmailService {
                 + "-----------");
         mailSender.send(message);
     }
+
     public void cancellationEmail(Booking booking) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(booking.getUserEmail());
@@ -67,6 +64,7 @@ public class EmailService {
                 + "-----------");
         mailSender.send(message);
     }
+
     public void renouvReminderEmail(Booking booking) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(booking.getUserEmail());
@@ -78,6 +76,7 @@ public class EmailService {
                 + "-----------");
         mailSender.send(message);
     }
+
     public void renouvEmail(Booking booking) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(booking.getUserEmail());
@@ -111,8 +110,6 @@ public class EmailService {
 
         mailSender.send(message);
     }
-
-
 
 
 }

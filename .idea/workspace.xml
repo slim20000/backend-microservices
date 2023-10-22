@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29542f52-5d80-40d9-ab6f-501f56505fc2" name="Changes" comment="Logement">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="29542f52-5d80-40d9-ab6f-501f56505fc2" name="Changes" comment="payment">
       <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/pi/bookingservice/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/pi/bookingservice/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_qrcode.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/booking_qrcode.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +263,7 @@
       <workItem from="1697840567885" duration="2407000" />
       <workItem from="1697843007258" duration="7620000" />
       <workItem from="1697880300313" duration="14184000" />
-      <workItem from="1697970064089" duration="7800000" />
+      <workItem from="1697970064089" duration="8075000" />
     </task>
     <task id="LOCAL-00001" summary="commit2">
       <created>1696457483553</created>
@@ -295,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697970738662</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="payment">
+      <created>1697978726515</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697978726515</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +321,8 @@
     <MESSAGE value="commit2" />
     <MESSAGE value="commit3" />
     <MESSAGE value="Logement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logement" />
+    <MESSAGE value="payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="payment" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
