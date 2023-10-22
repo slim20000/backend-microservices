@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29542f52-5d80-40d9-ab6f-501f56505fc2" name="Changes" comment="commit3" />
+    <list default="true" id="29542f52-5d80-40d9-ab6f-501f56505fc2" name="Changes" comment="Logement">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/pi/bookingservice/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/pi/bookingservice/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_qrcode.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/booking_qrcode.pdf" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +20,7 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -42,7 +47,7 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2V5X4mfzVwrwLgpQyn9JSdJtMWT" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -51,6 +56,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -259,7 +265,7 @@
       <workItem from="1697840567885" duration="2407000" />
       <workItem from="1697843007258" duration="7620000" />
       <workItem from="1697880300313" duration="14184000" />
-      <workItem from="1697970064089" duration="320000" />
+      <workItem from="1697970064089" duration="7800000" />
     </task>
     <task id="LOCAL-00001" summary="commit2">
       <created>1696457483553</created>
@@ -275,7 +281,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696892087040</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Logement">
+      <created>1697970682251</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697970682251</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Logement">
+      <created>1697970738662</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697970738662</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +315,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit2" />
     <MESSAGE value="commit3" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit3" />
+    <MESSAGE value="Logement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logement" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

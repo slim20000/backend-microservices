@@ -15,6 +15,10 @@ import org.springframework.stereotype.Service;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import javax.transaction.Transactional;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 @Service
 @RequiredArgsConstructor
@@ -86,24 +90,29 @@ public class EmailService {
         mailSender.send(message);
     }
 
-
     public void confirmationEmail3(Booking booking, String pdfFilePath) throws MessagingException {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
         helper.setTo(booking.getUserEmail());
         helper.setSubject("Booking Confirmation");
-        helper.setText("Dear " + booking.getUserEmail() + ",\n\n"
-                + "Your booking has been confirmed for Room : " + booking.getRoomId() + " from "
-                + booking.getStartDate().toString() + " to " + booking.getEndDate().toString() + ".\n\n"
-                + "Total price: TND" + booking.getTotalPrice() + "\n\n"
-                + "Thank you.\n"
-                + "-----------");
+
+        String htmlContent = "<p>Dear " + booking.getUserEmail() + ",</p>"
+                + "<p>Your booking has been confirmed for Room : " + booking.getRoomId() + " from "
+                + booking.getStartDate().toString() + " to " + booking.getEndDate().toString() + ".</p>"
+                + "<p>Total price: TND" + booking.getTotalPrice() + "</p>"
+                + "<p>Thank you.</p>"
+                + "<p>-----------</p>";
+
+        helper.setText(htmlContent, true);
+
         FileSystemResource pdfFile = new FileSystemResource(pdfFilePath);
         helper.addAttachment("booking_qrcode.pdf", pdfFile);
 
         mailSender.send(message);
     }
+
+
 
 
 }
