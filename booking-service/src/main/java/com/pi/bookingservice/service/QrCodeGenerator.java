@@ -8,8 +8,6 @@ import com.pi.bookingservice.model.Booking;
 import com.pi.bookingservice.repository.BookingRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -29,7 +27,7 @@ public class QrCodeGenerator {
         document.open();
 
         Paragraph paragraph = new Paragraph();
-     //   paragraph.add(new Chunk("Booking ID: " + booking.getBookingId() + "\n"));
+        //   paragraph.add(new Chunk("Booking ID: " + booking.getBookingId() + "\n"));
         paragraph.add(new Chunk("Room ID: " + booking.getRoomId() + "\n"));
         paragraph.add(new Chunk("Start date: " + booking.getStartDate() + "\n"));
         paragraph.add(new Chunk("End date: " + booking.getEndDate() + "\n"));
@@ -40,10 +38,10 @@ public class QrCodeGenerator {
         String bookingDetails =
                 //"Booking ID: " + booking.getBookingId() + "\n" +
                 "Room ID: " + booking.getRoomId() + "\n" +
-                "Start date: " + booking.getStartDate() + "\n" +
-                "End date: " + booking.getEndDate() + "\n" +
-                "User email: " + booking.getUserEmail() + "\n" +
-                "Total price: " + booking.getTotalPrice();
+                        "Start date: " + booking.getStartDate() + "\n" +
+                        "End date: " + booking.getEndDate() + "\n" +
+                        "User email: " + booking.getUserEmail() + "\n" +
+                        "Total price: " + booking.getTotalPrice();
         BarcodeQRCode qrCode = new BarcodeQRCode(bookingDetails, 1000, 1000, null);
         Image qrCodeImage = qrCode.getImage();
         qrCodeImage.scaleAbsolute(200, 200);

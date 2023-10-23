@@ -11,6 +11,7 @@
         <module name="paiment-service" />
         <module name="availability-service" />
         <module name="exchange-service" />
+        <module name="article-service" />
         <module name="booking-service" />
         <module name="room-service" />
         <module name="discoveryserver" />
@@ -21,6 +22,7 @@
     <bytecodeTargetLevel>
       <module name="apigateway" target="11" />
       <module name="application-service" target="11" />
+      <module name="article-service" target="11" />
       <module name="availability-service" target="19" />
       <module name="booking-service" target="11" />
       <module name="candidat-service" target="11" />
@@ -39,6 +41,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="apigateway" options="-parameters" />
       <module name="application-service" options="-parameters" />
+      <module name="article-service" options="-parameters" />
       <module name="availability-service" options="-parameters" />
       <module name="booking-service" options="-parameters" />
       <module name="candidat-service" options="-parameters" />

@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/exchange-service/pom.xml" />
+        <option value="$PROJECT_DIR$/article-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

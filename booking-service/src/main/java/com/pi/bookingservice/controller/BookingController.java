@@ -11,8 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
@@ -31,12 +32,13 @@ public class BookingController {
     private BookingService bookingService;
     @Autowired
     private JavaMailSender mailSender;
+
     @PostMapping("/create-booking")
     public ResponseEntity<Booking> createBooking(@RequestBody Booking booking,
                                                  @RequestParam String token,
                                                  @RequestParam Double amount,
                                                  @RequestParam String currency
-                                                 ) {
+    ) {
         try {
             Booking createdBooking = bookingService.createBooking(booking, token, amount, currency);
             return ResponseEntity.ok(createdBooking);
@@ -49,18 +51,21 @@ public class BookingController {
     public Booking extendBooking(@PathVariable long bookingId,
                                  @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") @Future(message = "date in the future") LocalDate newEndDate,
                                  @RequestParam @NotBlank(message = "payment required") String token,
-                                 @RequestParam @Positive(message = "random > 0")Double amount,
-                                 @RequestParam  @NotBlank(message = "put usd") String currency) {
-        return bookingService.extendBooking(bookingId, newEndDate, token,amount, currency);
+                                 @RequestParam @Positive(message = "random > 0") Double amount,
+                                 @RequestParam @NotBlank(message = "put usd") String currency) {
+        return bookingService.extendBooking(bookingId, newEndDate, token, amount, currency);
     }
+
     @GetMapping
     public List<Booking> getAllBookings() {
         return bookingService.getAllBookings();
     }
+
     @DeleteMapping("/{bookingId}")
     public void deleteBooking(@PathVariable long bookingId) {
         bookingService.deleteBooking(bookingId);
     }
+
     @PostMapping("/send-mail")
     public ResponseEntity<String> sendEmail(@RequestBody Booking booking) {
         SimpleMailMessage message = new SimpleMailMessage();
@@ -77,6 +82,7 @@ public class BookingController {
 
         return ResponseEntity.ok("Email sent successfully!");
     }
+
     @GetMapping("/statistics")
     public ResponseEntity<Statistics> getStatistics(
             @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,

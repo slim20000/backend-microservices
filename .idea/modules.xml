@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/api-gateway/apigateway.iml" filepath="$PROJECT_DIR$/api-gateway/apigateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/article-service/article-service.iml" filepath="$PROJECT_DIR$/article-service/article-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/availability-service/availability-service.iml" filepath="$PROJECT_DIR$/availability-service/availability-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/booking-service/booking-service.iml" filepath="$PROJECT_DIR$/booking-service/booking-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/configserver/configserver.iml" filepath="$PROJECT_DIR$/configserver/configserver.iml" />
