@@ -14,8 +14,11 @@ import java.util.List;
 @NoArgsConstructor
 public class DormRequest {
 
+
     private String name;
     private String address;
+
+
     @JsonIgnore
     private List<RoomRequest> rooms;
 }

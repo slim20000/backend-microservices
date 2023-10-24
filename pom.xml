@@ -18,6 +18,7 @@
         <module>candidat-service</module>
         <module>company-service</module>
         <module>application-service</module>
+        <module>event-service</module>
     </modules>
 
     <parent>

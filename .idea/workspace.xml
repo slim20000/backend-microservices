@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29542f52-5d80-40d9-ab6f-501f56505fc2" name="Changes" comment="article-service">
+    <list default="true" id="29542f52-5d80-40d9-ab6f-501f56505fc2" name="Changes" comment="program">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/configurations/api-gateway.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/configurations/api-gateway.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_qrcode.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/booking_qrcode.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/room-service/src/test/java/com/pi/roomservice/RoomServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/room-service/src/main/java/com/pi/roomservice/dto/DormRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/room-service/src/main/java/com/pi/roomservice/dto/DormRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room-service/src/main/java/com/pi/roomservice/dto/RoomResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/room-service/src/main/java/com/pi/roomservice/dto/RoomResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,10 +73,13 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "C:/Users/slimd/OneDrive/Bureau/backend_ms/backend-microservices/application-service",
+    "last_opened_file_path": "C:/Users/slimd/OneDrive/Bureau/backend_ms/backend-microservices/application-service/src/main/java/com/slim/applicationservice/model",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "767654c163e44dfc9c86644eb9e5baf8"
+    "spring.configuration.checksum": "fc1165dfaafc7cb10cc2891de24bde03"
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -85,22 +90,23 @@
       <recent name="com.slim.identityService.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\slimd\OneDrive\Bureau\backend_ms\backend-microservices\configserver\src\main\resources\configurations" />
+      <recent name="C:\Users\slimd\OneDrive\Bureau\backend_ms\backend-microservices\event-service" />
       <recent name="C:\Users\slimd\OneDrive\Bureau\backend_ms\backend-microservices\application-service" />
       <recent name="C:\Users\slimd\OneDrive\Bureau\backend_ms\backend-microservices\candidat-service" />
       <recent name="C:\Users\slimd\OneDrive\Bureau\backend_ms\backend-microservices\company-service" />
-      <recent name="C:\Users\slimd\OneDrive\Bureau\backend_ms\backend-microservices" />
-      <recent name="C:\Users\slimd\OneDrive\Bureau\backend_ms\backend-microservices\configserver\src\main\resources\configurations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\slimd\OneDrive\Bureau\backend_ms\backend-microservices" />
       <recent name="C:\Users\slimd\OneDrive\Bureau\backend_ms\backend-microservices\configserver\src\main\resources\configurations" />
       <recent name="C:\Users\slimd\OneDrive\Bureau\pi\SpringBootMicroservices" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.eventservice.Config" />
       <recent name="com.example.articleservice.conf" />
       <recent name="com.example.exchangeservice.controller" />
       <recent name="com.example.exchangeservice.repository" />
       <recent name="com.example.exchangeservice.service" />
-      <recent name="com.slim.identityService.config" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -116,7 +122,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CompanyServiceApplication (1)">
+  <component name="RunManager" selected="Spring Boot.EventServiceApplication">
     <configuration name="CompanyServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="company-service" />
       <extension name="coverage">
@@ -227,6 +233,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EventServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="event-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.eventservice.EventServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExchangeServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="exchange-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.exchangeservice.ExchangeServiceApplication" />
@@ -268,6 +281,7 @@
       <item itemvalue="Spring Boot.CandidatServiceApplication" />
       <item itemvalue="Spring Boot.CompanyServiceApplication" />
       <item itemvalue="Spring Boot.CompanyServiceApplication (1)" />
+      <item itemvalue="Spring Boot.EventServiceApplication" />
       <item itemvalue="Spring Boot.ExchangeServiceApplication" />
       <item itemvalue="Spring Boot.IdentityServiceApplication" />
       <item itemvalue="Spring Boot.ConfigserverApplication" />
@@ -327,7 +341,8 @@
       <workItem from="1697880300313" duration="14184000" />
       <workItem from="1697970064089" duration="10634000" />
       <workItem from="1698006685996" duration="2146000" />
-      <workItem from="1698048482418" duration="9098000" />
+      <workItem from="1698048482418" duration="13866000" />
+      <workItem from="1698138403568" duration="2451000" />
     </task>
     <task id="LOCAL-00001" summary="commit2">
       <created>1696457483553</created>
@@ -378,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698072549574</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="program">
+      <created>1698088731905</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698088731905</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +423,8 @@
     <MESSAGE value="Logement" />
     <MESSAGE value="payment" />
     <MESSAGE value="article-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="article-service" />
+    <MESSAGE value="program" />
+    <option name="LAST_COMMIT_MESSAGE" value="program" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
